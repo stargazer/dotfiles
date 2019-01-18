@@ -1,6 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/stargazer/Documents/dev/smartpr/smartpr-api-build/roles/api/deploy'
-let g:netrw_dirhist_2='/Users/stargazer/Documents/dev/smartpr/smartpr-build/shared/api01/venv/src/smartpr-api/smartpr/api'
-let g:netrw_dirhist_3='/Users/stargazer/Documents/dev/smartpr/smartpr-build'
-let g:netrw_dirhist_4='/Users/stargazer/Documents/dev/smartpr/smartpr-build/env_playground'

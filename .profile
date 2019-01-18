@@ -26,5 +26,13 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# Disable middle mouse button on the touchbar
-~/.disable-middle-button-touchbar.sh
+# Disable middle touchpad button
+TOUCHPAD_ID="$(xinput list | grep Touchpad | awk -F 'id=' '{ print $2 }' | awk '{ print $1 }')"
+xinput set-button-map $TOUCHPAD_ID 1 0 3
+
+# If no external monitor is detected, scale text to 1.22X
+if [ $(xrandr --listmonitors | grep Monitors| awk '{print $2}') -eq "1" ]; then
+    dconf write /org/gnome/desktop/interface/text-scaling-factor 1.22
+else
+    dconf write /org/gnome/desktop/interface/text-scaling-factor 1
+fi

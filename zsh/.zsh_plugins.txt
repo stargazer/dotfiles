@@ -1,0 +1,14 @@
+# Plugin: Syntax highlighting
+zdharma/fast-syntax-highlighting
+
+# Plugin: Colored man pages
+ael-code/zsh-colored-man-pages
+
+# Plugins from the oh-my-zsh plugin bundle
+robbyrussell/oh-my-zsh path:plugins/docker
+robbyrussell/oh-my-zsh path:plugins/docker-compose
+robbyrussell/oh-my-zsh path:plugins/git
+
+# Theme
+romkatv/powerlevel10k
+

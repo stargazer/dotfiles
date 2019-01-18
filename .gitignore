@@ -1,0 +1,3 @@
+*.swp
+.vim/plugged
+.oh-my-zsh/

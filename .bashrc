@@ -116,6 +116,5 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# My aliases
-alias vault="ansible-vault --vault-password-file=~/.vault-smartpr"
-alias playbook="ansible-playbook --vault-password-file=~/.vault-smartpr"
+# Export envvar for Ansible password file
+export ANSIBLE_VAULT_PASSWORD_FILE="${HOME}/.vault-smartpr"
