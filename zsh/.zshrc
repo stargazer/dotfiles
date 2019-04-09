@@ -24,4 +24,5 @@ fi
 
 # Export envvar for Ansible password file
 export ANSIBLE_VAULT_PASSWORD_FILE="${HOME}/.vault-smartpr"
-
+# Deal with incompatibilities when ssh-ing
+export TERM=xterm-256color
