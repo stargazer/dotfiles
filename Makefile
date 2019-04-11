@@ -3,7 +3,8 @@ setup: \
 	setup-profile \
 	setup-bashrc \
 	setup-git \
-	setup-source-code-pro-fonts \
+	setup-fonts \
+	setup-terminator \
 	setup-kitty \
 	setup-zsh \
 	setup-antibody \
@@ -22,10 +23,16 @@ setup-bashrc:
 setup-git:
 	sudo apt-get install git
 
-setup-source-code-pro-fonts:
+setup-fonts:
 	rm -rf ${HOME}/.fonts/adobe-fonts
 	git clone --depth 1 --branch release https://github.com/adobe-fonts/source-code-pro.git ${HOME}/.fonts/adobe-fonts/source-code-pro
 	fc-cache -f -v ${HOME}/.fonts/adobe-fonts/source-code-pro
+
+	sudo apt-get install fonts-roboto fonts-inconsolata
+
+setup-terminator:
+	sudo apt-get install terminator
+	ln -sf `pwd`/terminator/config ${HOME}/.config/terminator/.
 
 setup-kitty:
 	curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
