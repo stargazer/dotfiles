@@ -28,7 +28,7 @@ setup-fonts:
 	git clone --depth 1 --branch release https://github.com/adobe-fonts/source-code-pro.git ${HOME}/.fonts/adobe-fonts/source-code-pro
 	fc-cache -f -v ${HOME}/.fonts/adobe-fonts/source-code-pro
 
-	sudo apt-get install -y fonts-roboto fonts-inconsolata
+	sudo apt-get install -y fonts-roboto fonts-inconsolata fonts-powerline
 
 setup-terminator:
 	sudo apt-get install -y terminator
