@@ -51,8 +51,8 @@ filetype plugin indent on
 " Show trailing whitespace chars
 set list
 set listchars=tab:>·,trail:·,nbsp:~
-" Select font
-set guifont=Ubuntu\ Mono\ 11
+" Select font for Gvim
+set guifont=Roboto\ Mono\ Medium\ 10
 
 """
 """ Color scheme
