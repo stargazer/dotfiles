@@ -21,17 +21,17 @@ setup-bashrc:
 	ln -sf `pwd`/.bashrc ${HOME}/.
 
 setup-git:
-	sudo apt-get install git
+	sudo apt-get install -y git
 
 setup-fonts:
 	rm -rf ${HOME}/.fonts/adobe-fonts
 	git clone --depth 1 --branch release https://github.com/adobe-fonts/source-code-pro.git ${HOME}/.fonts/adobe-fonts/source-code-pro
 	fc-cache -f -v ${HOME}/.fonts/adobe-fonts/source-code-pro
 
-	sudo apt-get install fonts-roboto fonts-inconsolata
+	sudo apt-get install -y fonts-roboto fonts-inconsolata
 
 setup-terminator:
-	sudo apt-get install terminator
+	sudo apt-get install -y terminator
 	ln -sf `pwd`/terminator/config ${HOME}/.config/terminator/.
 
 setup-kitty:
@@ -51,13 +51,13 @@ setup-antibody:
 	curl -sL git.io/antibody | sh -s
 
 setup-tmux:
-	sudo apt-get install tmux
+	sudo apt-get install -y tmux
 	ln -sf `pwd`/tmux/.tmux ${HOME}/.
 	ln -sf `pwd`/tmux/.tmux.conf ${HOME}/.
 	ln -sf `pwd`/scripts/tmux-smartpr.sh ${HOME}/.
 
 setup-vim:
-	sudo apt-get install vim
+	sudo apt-get install -y vim
 	ln -sf `pwd`/vim/.vim ${HOME}/.
 	ln -sf `pwd`/vim/.vimrc  ${HOME}/.
 
