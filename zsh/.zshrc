@@ -26,3 +26,5 @@ fi
 export ANSIBLE_VAULT_PASSWORD_FILE="${HOME}/.vault-smartpr"
 # Deal with incompatibilities when ssh-ing
 export TERM=xterm-256color
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

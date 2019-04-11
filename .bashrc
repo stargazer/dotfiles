@@ -118,3 +118,5 @@ fi
 
 # Export envvar for Ansible password file
 export ANSIBLE_VAULT_PASSWORD_FILE="${HOME}/.vault-smartpr"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
