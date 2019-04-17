@@ -11,11 +11,13 @@
 [plugins]
 [profiles]
   [[default]]
-    background_color = "#2e3436"
-    background_darkness = 0.97
-    background_type = transparent
-    cursor_color = "#aaaaaa"
-    custom_command = zsh
-    font = Roboto Mono Medium 9
-    use_custom_command = True
+    background_color = "#383838"
+    background_type = "solid"
+    foreground_color = "#f4f4f4"
+    use_theme_colors = False
+
+    font = "Roboto Mono Medium 10"
     use_system_font = False
+
+    custom_command = zsh
+    use_custom_command = True
