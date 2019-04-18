@@ -9,7 +9,8 @@ setup: \
 	setup-zsh \
 	setup-antibody \
 	setup-tmux \
-	setup-vim
+	setup-vim \
+	setup-xrandr
 
 init:
 	sudo apt-get update
@@ -61,4 +62,5 @@ setup-vim:
 	ln -sf `pwd`/vim/.vim ${HOME}/.
 	ln -sf `pwd`/vim/.vimrc  ${HOME}/.
 
-
+setup-xrandr:
+	ln -sf `pwd`/.xprofile ${HOME}/.
