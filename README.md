@@ -7,10 +7,9 @@
 * [tmux](https://github.com/tmux/tmux/wiki)
 * [vim](https://www.vim.org/)
 
-### In addition
-* `.bashrc`: Bash configuration file
-* `.profile`: Login shell configuration
+The `Makefile` configures all these tools, and installs a series of
+applications and utilities I use.
 
-### Set up 
+### How to
 
 `make setup`
