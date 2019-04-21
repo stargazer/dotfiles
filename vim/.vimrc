@@ -14,7 +14,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'majutsushi/tagbar'
   Plug 'morhetz/gruvbox'
   Plug 'NLKNguyen/papercolor-theme'
-  Plug 'nvie/vim-flake8'
+  Plug 'nvie/vim-flake8', { 'do': 'pip install flake8' }
   Plug 'pearofducks/ansible-vim'
   Plug 'plasticboy/vim-markdown'
   Plug 'rhysd/committia.vim'
