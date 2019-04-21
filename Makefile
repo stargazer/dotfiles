@@ -10,11 +10,16 @@ setup: \
 	setup-zsh \
 	setup-tmux \
 	setup-vim \
+	setup-gnome-shell-extensions \
+	setup-ubuntu-dock \
+	setup-gtk-themes \
+	setup-vagrant \
+	setup-ansible \
 	setup-xrandr
 
 init:
 	sudo apt-get update
-	sudo apt-get install -y git unzip curl
+	sudo apt-get install -y git unzip curl python-pip
 
 setup-profile:
 	ln -sf `pwd`/.profile ${HOME}/.
@@ -70,8 +75,46 @@ setup-tmux:
 
 setup-vim:
 	sudo apt-get install -y vim ctags
+
 	ln -sf `pwd`/vim/.vim ${HOME}/.
 	ln -sf `pwd`/vim/.vimrc  ${HOME}/.
+
+setup-gnome-shell-extensions:
+	sudo apt-get install -y gnome-tweaks
+
+	mkdir -p ${HOME}/.local/share/gnome-shell/extensions
+	git clone https://github.com/gTile/gTile.git ~/.local/share/gnome-shell/extensions/gTile@vibou
+
+setup-ubuntu-dock:
+	gsettings set org.gnome.shell.extensions.dash-to-dock autohide true
+	gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
+	gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
+	gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode FIXED
+	gsettings set org.gnome.shell.extensions.dash-to-dock background-opacity 0.2
+	gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 48
+	gsettings set org.gnome.shell.extensions.dash-to-dock unity-backlit-items true
+
+setup-gtk-themes:
+	sudo add-apt-repository -y ppa:snwh/pulp
+	sudo apt-get update
+
+	sudo apt-get install -y paper-icon-theme
+	sudo apt-get install -y arc-theme
+
+	git clone https://github.com/paullinuxthemer/Nextwaita
+	mv Nextwaita/Nextwaita-SCALE ${HOME}/.themes
+	rm -rf Nextwaita
+
+setup-vagrant:
+	sudo apt-get remove -y vagrant
+	wget https://releases.hashicorp.com/vagrant/2.2.4/vagrant_2.2.4_x86_64.deb
+	sudo dpkg -i vagrant_2.2.4_x86_64.deb
+	rm vagrant_2.2.4_x86_64.deb
+
+	sudo apt-get install nfs-kernel-server
+
+setup-ansible:
+	pip install ansible==2.7.*
 
 setup-xrandr:
 	ln -sf `pwd`/.xprofile ${HOME}/.
