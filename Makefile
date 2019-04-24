@@ -52,7 +52,6 @@ setup-fonts:
 	gsettings set org.gnome.settings-daemon.plugins.xsettings hinting medium
 	gsettings set org.gnome.settings-daemon.plugins.xsettings antialiasing grayscale
 
->>>>>>> 497e855... hinting
 setup-terminator:
 	sudo apt-get install -y terminator
 	mkdir -p ${HOME}/.config/terminator

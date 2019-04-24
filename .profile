@@ -29,6 +29,3 @@ fi
 # Disable middle touchpad button
 TOUCHPAD_ID="$(xinput list | grep Touchpad | awk -F 'id=' '{ print $2 }' | awk '{ print $1 }')"
 xinput set-button-map $TOUCHPAD_ID 1 0 3
-
-# Scale gnome-shell UI to 1 - Essentially no scaling
-dconf write /org/gnome/desktop/interface/text-scaling-factor 1
