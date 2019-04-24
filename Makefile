@@ -43,6 +43,16 @@ setup-fonts:
 
 	fc-cache -f -v ${HOME}/.fonts/adobe-fonts/source-code-pro
 
+	gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Roboto 11'
+	gsettings set org.gnome.desktop.interface font-name 'Ubuntu 9'
+	gsettings set org.gnome.desktop.interface document-font-name 'Sans 9'
+	gsettings set org.gnome.desktop.interface monospace-font-name 'Ubuntu Mono 11'
+
+	gsettings set org.gnome.desktop.interface text-scaling-factor 1
+	gsettings set org.gnome.settings-daemon.plugins.xsettings hinting medium
+	gsettings set org.gnome.settings-daemon.plugins.xsettings antialiasing grayscale
+
+>>>>>>> 497e855... hinting
 setup-terminator:
 	sudo apt-get install -y terminator
 	mkdir -p ${HOME}/.config/terminator
@@ -104,6 +114,9 @@ setup-gtk-themes:
 	git clone https://github.com/paullinuxthemer/Nextwaita
 	mv Nextwaita/Nextwaita-SCALE ${HOME}/.themes
 	rm -rf Nextwaita
+
+	gsettings set org.gnome.desktop.interface gtk-theme Nextwaita-SCALE
+	gsettings set org.gnome.desktop.interface icon-theme Paper
 
 setup-vagrant:
 	sudo apt-get remove -y vagrant
