@@ -51,6 +51,7 @@ setup-fonts:
 	gsettings set org.gnome.desktop.interface text-scaling-factor 1
 	gsettings set org.gnome.settings-daemon.plugins.xsettings hinting medium
 	gsettings set org.gnome.settings-daemon.plugins.xsettings antialiasing grayscale
+	gsettings set org.gnome.settings-daemon.plugins.xsettings rgba-order vrgb
 
 setup-terminator:
 	sudo apt-get install -y terminator
