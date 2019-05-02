@@ -43,15 +43,16 @@ setup-fonts:
 
 	fc-cache -f -v ${HOME}/.fonts/adobe-fonts/source-code-pro
 
-	gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Roboto 11'
+	gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Roboto 13'
 	gsettings set org.gnome.desktop.interface font-name 'Ubuntu 9'
 	gsettings set org.gnome.desktop.interface document-font-name 'Sans 9'
 	gsettings set org.gnome.desktop.interface monospace-font-name 'Ubuntu Mono 11'
 
-	gsettings set org.gnome.desktop.interface text-scaling-factor 1
+	gsettings set org.gnome.desktop.interface text-scaling-factor 1.22
 	gsettings set org.gnome.settings-daemon.plugins.xsettings hinting medium
 	gsettings set org.gnome.settings-daemon.plugins.xsettings antialiasing grayscale
-	gsettings set org.gnome.settings-daemon.plugins.xsettings rgba-order vrgb
+	gsettings set org.gnome.settings-daemon.plugins.xsettings rgba-order rgb
+	gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/ShellShowsAppMenu': <1>, 'Xft/DPI': <82944>}"
 
 setup-terminator:
 	sudo apt-get install -y terminator
@@ -92,6 +93,7 @@ setup-vim:
 setup-gnome-shell-extensions:
 	sudo apt-get install -y gnome-tweaks
 
+	rm -rf ${HOME}/.local/share/gnome-shell/extensions/*
 	mkdir -p ${HOME}/.local/share/gnome-shell/extensions
 	git clone https://github.com/gTile/gTile.git ~/.local/share/gnome-shell/extensions/gTile@vibou
 
@@ -111,6 +113,7 @@ setup-gtk-themes:
 	sudo apt-get install -y paper-icon-theme
 	sudo apt-get install -y arc-theme
 
+	rm -rf ${HOME}/.themes/*
 	git clone https://github.com/paullinuxthemer/Nextwaita
 	mv Nextwaita/Nextwaita-SCALE ${HOME}/.themes
 	rm -rf Nextwaita

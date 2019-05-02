@@ -16,7 +16,7 @@
     foreground_color = "#f4f4f4"
     use_theme_colors = False
 
-    font = "Roboto Mono Medium 10"
+    font = "Roboto Mono Medium 8"
     use_system_font = False
 
     custom_command = zsh
