@@ -2,6 +2,9 @@
 source <(antibody init)
 antibody bundle < ${HOME}/.zsh_plugins.txt
 
+# Auto-completion with arrow keys
+zstyle ':completion:*' menu select
+
 # History configuration
 HISTSIZE=5000               # How many lines of history to keep in memory
 HISTFILE=~/.zsh_history     # Where to save history to disk
