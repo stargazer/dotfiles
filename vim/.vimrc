@@ -13,6 +13,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf.vim'
   Plug 'majutsushi/tagbar'
   Plug 'morhetz/gruvbox'
+  Plug 'neovimhaskell/haskell-vim'
   Plug 'NLKNguyen/papercolor-theme'
   Plug 'nvie/vim-flake8', { 'do': 'pip install flake8' }
   Plug 'pearofducks/ansible-vim'
