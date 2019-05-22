@@ -104,7 +104,12 @@ let g:jedi#documentation_command = "<C-d>"
 let g:jedi#completions_command = "<C-Space>"
 
 """ lightline.vim
-let g:lightline = {"colorscheme": "solarized"}
+let g:lightline = {
+     \ 'colorscheme': 'solarized',
+     \ 'active': {
+     \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'absolutepath', 'modified' ] ],
+     \ }
+     \ }
 set ls=2
 
 """ nerdtree
