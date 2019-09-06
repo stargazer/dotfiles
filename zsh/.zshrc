@@ -30,4 +30,9 @@ export ANSIBLE_VAULT_PASSWORD_FILE="${HOME}/.vault-smartpr"
 # Deal with incompatibilities when ssh-ing
 export TERM=xterm-256color
 
+alias git-network-high-level='git log --graph --all --simplify-by-decoration --pretty=format:"%C(yellow)%h%C(white)%d %C(bold black)%ar %C(reset)%n"'
+alias git-network-detail='git log --graph --all --format="%D"'
+alias git-network-detail-verbose='git log --graph --all --format="%D - %s"'
+alias git-flow-chart="git log --graph --simplify-by-decoration --pretty=format:'%C(yellow)%h%C(white)%d %C(bold black)%ar %C(reset)%n' --all"
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
