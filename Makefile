@@ -48,7 +48,7 @@ setup-fonts:
 	gsettings set org.gnome.desktop.interface document-font-name 'Sans 9'
 	gsettings set org.gnome.desktop.interface monospace-font-name 'Ubuntu Mono 11'
 
-	gsettings set org.gnome.desktop.interface text-scaling-factor 1.22
+	gsettings set org.gnome.desktop.interface text-scaling-factor 1.00
 	gsettings set org.gnome.settings-daemon.plugins.xsettings hinting medium
 	gsettings set org.gnome.settings-daemon.plugins.xsettings antialiasing grayscale
 	gsettings set org.gnome.settings-daemon.plugins.xsettings rgba-order rgb
