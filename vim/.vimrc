@@ -3,22 +3,36 @@
 """
 
 call plug#begin('~/.vim/plugged')
-  Plug 'airblade/vim-gitgutter'
+  " Color schemes
   Plug 'altercation/vim-colors-solarized'
   Plug 'endel/vim-github-colorscheme'
-  Plug 'davidhalter/jedi-vim'
-  Plug 'iamcco/markdown-preview.nvim', { 'do': ':call mkdp#util#install()', 'for': 'markdown', 'on': 'MarkdownPreview' }
-  Plug 'itchyny/lightline.vim'
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-  Plug 'junegunn/fzf.vim'
-  Plug 'majutsushi/tagbar'
   Plug 'morhetz/gruvbox'
-  Plug 'neovimhaskell/haskell-vim'
   Plug 'NLKNguyen/papercolor-theme'
-  Plug 'nvie/vim-flake8', { 'do': 'pip install flake8' }
+
+  " Syntax highlighers
+  Plug 'neovimhaskell/haskell-vim'
   Plug 'pearofducks/ansible-vim'
   Plug 'plasticboy/vim-markdown'
+
+  " Various plugins
+  " Shows file diffs
+  Plug 'airblade/vim-gitgutter'
+  " Python auto completion:
+  Plug 'davidhalter/jedi-vim'
+  " Markdown preview
+  Plug 'iamcco/markdown-preview.nvim', { 'do': ':call mkdp#util#install()', 'for': 'markdown', 'on': 'MarkdownPreview' }
+  " Status line
+  Plug 'itchyny/lightline.vim'
+  " Fuzzy finder
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+  Plug 'junegunn/fzf.vim'
+  " Tagbar
+  Plug 'majutsushi/tagbar'
+  " Flake 8
+  Plug 'nvie/vim-flake8', { 'do': 'pip install flake8' }
+  " git commit editing
   Plug 'rhysd/committia.vim'
+  " Nerdtree
   Plug 'scrooloose/nerdtree'
 call plug#end()
 
