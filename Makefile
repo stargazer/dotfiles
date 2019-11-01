@@ -43,15 +43,15 @@ setup-fonts:
 
 	fc-cache -f -v ${HOME}/.fonts/adobe-fonts/source-code-pro
 
-	gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Roboto 13'
-	gsettings set org.gnome.desktop.interface font-name 'Ubuntu 9'
+	gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Ubuntu 8'
+	gsettings set org.gnome.desktop.interface font-name 'Ubuntu 10'
 	gsettings set org.gnome.desktop.interface document-font-name 'Sans 9'
-	gsettings set org.gnome.desktop.interface monospace-font-name 'Ubuntu Mono 11'
+	gsettings set org.gnome.desktop.interface monospace-font-name 'Ubuntu Mono 9'
 
-	gsettings set org.gnome.desktop.interface text-scaling-factor 1.00
-	gsettings set org.gnome.settings-daemon.plugins.xsettings hinting medium
+	gsettings set org.gnome.desktop.interface text-scaling-factor 1
+	gsettings set org.gnome.settings-daemon.plugins.xsettings hinting slight
 	gsettings set org.gnome.settings-daemon.plugins.xsettings antialiasing grayscale
-	gsettings set org.gnome.settings-daemon.plugins.xsettings rgba-order rgb
+	gsettings set org.gnome.settings-daemon.plugins.xsettings rgba-order vrgb
 	gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/ShellShowsAppMenu': <1>, 'Xft/DPI': <82944>}"
 
 setup-terminator:

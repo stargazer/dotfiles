@@ -12,12 +12,9 @@
 [profiles]
   [[default]]
     background_color = "#383838"
-    background_type = "solid"
-    foreground_color = "#f4f4f4"
-    use_theme_colors = False
-
-    font = "Roboto Mono Medium 11"
-    use_system_font = False
-
+    cursor_color = "#f4f4f4"
     custom_command = zsh
+    font = Source Code Pro Medium 9.6
+    foreground_color = "#f4f4f4"
     use_custom_command = True
+    use_system_font = False
