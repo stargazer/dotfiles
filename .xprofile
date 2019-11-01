@@ -2,6 +2,7 @@
 
 if [ $(xrandr --listmonitors | grep "Monitors" | awk '{ print $2 }' ) -eq "3" ]; then
         xrandr \
+        --dpi 81 \
         --output VIRTUAL1 --off \
         --output eDP1 --mode 1920x1080 --pos 0x424 --rotate normal \
         --output DP1 --off \
