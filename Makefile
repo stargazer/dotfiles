@@ -53,6 +53,10 @@ setup-fonts:
 	gsettings set org.gnome.settings-daemon.plugins.xsettings antialiasing grayscale
 	gsettings set org.gnome.settings-daemon.plugins.xsettings rgba-order vrgb
 	gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/ShellShowsAppMenu': <1>, 'Xft/DPI': <82944>}"
+setup-font-rendering:
+	# Fix font rendering
+	# See https://humdi.net/wiki/tips/how-to-fix-blurry-font-rendering-in-ubuntu
+	grep -qxF 'FREETYPE_PROPERTIES="truetype:interpreter-version=35 cff:no-stem-darkening=1 autofitter:warping=1"' /etc/environment || echo 'FREETYPE_PROPERTIES="truetype:interpreter-version=35 cff:no-stem-darkening=1 autofitter:warping=1"' | sudo tee -a /etc/environment
 
 setup-terminator:
 	sudo apt-get install -y terminator
