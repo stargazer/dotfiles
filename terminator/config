@@ -14,7 +14,7 @@
     background_color = "#383838"
     cursor_color = "#f4f4f4"
     custom_command = zsh
-    font = Source Code Pro Medium 9.6
+    font = Roboto Mono Medium 10
     foreground_color = "#f4f4f4"
     use_custom_command = True
     use_system_font = False
