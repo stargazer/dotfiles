@@ -13,6 +13,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'neovimhaskell/haskell-vim'
   Plug 'pearofducks/ansible-vim'
   Plug 'plasticboy/vim-markdown'
+  Plug 'rust-lang/rust.vim'
 
   " Various plugins
   " Shows file diffs
@@ -34,6 +35,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'rhysd/committia.vim'
   " Nerdtree
   Plug 'scrooloose/nerdtree'
+
 call plug#end()
 
 """
