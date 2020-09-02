@@ -18,8 +18,10 @@ call plug#begin('~/.vim/plugged')
   " Various plugins
   " Shows file diffs
   Plug 'airblade/vim-gitgutter'
-  " Python auto completion:
+  " Python auto completion
   Plug 'davidhalter/jedi-vim'
+  " Asynchronous Linting
+  Plug 'dense-analysis/ale', { 'do': 'pip install flake8 autopep8' }
   " Markdown preview
   Plug 'iamcco/markdown-preview.nvim', { 'do': ':call mkdp#util#install()', 'for': 'markdown', 'on': 'MarkdownPreview' }
   " Status line
@@ -29,12 +31,12 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf.vim'
   " Tagbar
   Plug 'majutsushi/tagbar'
-  " Flake 8
-  Plug 'nvie/vim-flake8', { 'do': 'pip install flake8' }
   " git commit editing
   Plug 'rhysd/committia.vim'
   " Nerdtree
   Plug 'scrooloose/nerdtree'
+  " automatically format code according to PEP8
+  Plug 'tell-k/vim-autopep8', { 'do': 'pip install autopep8' }
 
 call plug#end()
 
@@ -140,10 +142,6 @@ let g:NERDTreeWinSize = 35
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " Hide the GitGutter signcolumn for the NerdTree tab
 autocmd FileType nerdtree setlocal signcolumn=no
-
-""" vim-flake8
-" https://github.com/nvie/vim-flake8
-autocmd BufWritePost *.py call Flake8()
 
 """ vim-gitgutter
 let g:gitgutter_sign_added = "\u25B6"
