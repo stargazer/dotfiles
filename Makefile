@@ -13,8 +13,7 @@ setup: \
 	setup-ubuntu-dock \
 	setup-gtk-themes \
 	setup-vagrant \
-	setup-ansible \
-	setup-xrandr
+	setup-ansible
 
 init:
 	sudo apt-get update
@@ -123,6 +122,3 @@ setup-vagrant:
 
 setup-ansible:
 	pip install ansible==2.7.*
-
-setup-xrandr:
-	ln -sf `pwd`/.xprofile ${HOME}/.
