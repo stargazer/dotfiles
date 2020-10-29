@@ -13,3 +13,7 @@ applications and utilities I use.
 ### How to
 
 `make setup`
+
+### Extra configuration
+
+* [rtorrent](https://rakshasa.github.io/rtorrent/)
