@@ -73,7 +73,6 @@ setup-tmux:
 	sudo apt-get install -y tmux
 	ln -sf `pwd`/tmux/.tmux ${HOME}/.
 	ln -sf `pwd`/tmux/.tmux.conf ${HOME}/.
-	ln -sf `pwd`/scripts/tmux-smartpr.sh ${HOME}/.
 
 setup-vim:
 	sudo apt-get install -y vim ctags
