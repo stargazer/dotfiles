@@ -5,7 +5,6 @@ setup: \
 	setup-git \
 	setup-fonts \
 	setup-terminator \
-	setup-kitty \
 	setup-antibody \
 	setup-zsh \
 	setup-tmux \
@@ -62,17 +61,6 @@ setup-terminator:
 	sudo apt-get install -y terminator
 	mkdir -p ${HOME}/.config/terminator
 	ln -sf `pwd`/terminator/config ${HOME}/.config/terminator/.
-
-setup-kitty:
-	curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
-	mkdir -p ${HOME}/.local/bin
-	mkdir -p ${HOME}/.config/kitty
-
-	ln -sf ${HOME}/.local/kitty.app/bin/kitty ${HOME}/.local/bin/.
-	ln -sf `pwd`/kitty/kitty.desktop ${HOME}/.local/share/applications/.
-
-	ln -sf `pwd`/kitty/kitty.conf ${HOME}/.config/kitty/.
-	ln -sf `pwd`/kitty/kitty.startup_session ${HOME}/.config/kitty/.
 
 setup-antibody:
 	curl -sL git.io/antibody | sh -s
