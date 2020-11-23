@@ -1,12 +1,12 @@
-#############################################################################
-#   Sample: https://github.com/rakshasa/rtorrent/wiki/CONFIG-Template
-# Complete: https://rtorrent-docs.readthedocs.io/en/latest/cmd-ref.html
-#   Useful: https://rtorrent-docs.readthedocs.io/en/latest/use-cases.html
+#############################################################################                                                       
+#   Sample: https://github.com/rakshasa/rtorrent/wiki/CONFIG-Template                                                               
+# Complete: https://rtorrent-docs.readthedocs.io/en/latest/cmd-ref.html                                                             
+#   Useful: https://rtorrent-docs.readthedocs.io/en/latest/use-cases.html                                                           
 #   Manual: https://rtorrent-docs.readthedocs.io/en/latest/
-#  Convert: https://github.com/rakshasa/rtorrent/wiki/rTorrent-0.9-Comprehensive-Command-list-(WIP)
-# Handbook: https://media.readthedocs.org/pdf/rtorrent-docs/latest/rtorrent-docs.pdf
-#     File: https://github.com/rakshasa/rtorrent/blob/master/doc/rtorrent.rc
-#############################################################################
+#  Convert: https://github.com/rakshasa/rtorrent/wiki/rTorrent-0.9-Comprehensive-Command-list-(WIP)                                 
+# Handbook: https://media.readthedocs.org/pdf/rtorrent-docs/latest/rtorrent-docs.pdf                                                
+#     File: https://github.com/rakshasa/rtorrent/blob/master/doc/rtorrent.rc                                                        
+#############################################################################                                                       
 
 # Maximum and minimum number of peers to connect to per torrent.
 #
@@ -37,25 +37,39 @@ throttle.global_up.max_rate.set_kb = 5120
 #
 directory.default.set = /mnt/NAS/downloads/
 
-# Default session directory. Make sure you don't run multiple instance
+# Default session directory. Make sure you don't run multiple instance                                                              
 # of rTorrent using the same session directory. Perhaps using a
 # relative path?
 #
 session.path.set = ./.rtorrent/sessions
 
-# Watch a directory for new torrents, and stop those that have been
+# Watch a directory for new torrents, and stop those that have been                                                                 
 # deleted.
 #
-schedule2 = watch_directory,5,5,"load.start=/mnt/NAS/torrents/*.torrent"
+schedule2 = watch_directory,5,5,"load.start=/mnt/NAS/torrents/*.torrent"                                                            
 
 #
 # Enable encryption
 #
-protocol.encryption.set = allow_incoming,try_outgoing,enable_retry
+protocol.encryption.set = allow_incoming,try_outgoing,enable_retry                                                                  
 
 #
 # Enable DHT support
 #
 dht.mode.set = auto
 dht.port.set = 6881
-protocol.pex.set= yes
+protocol.pex.set = yes
+
+# Preallocate torrent disk space
+system.file.allocate = yes
+
+#
+# Logging
+#
+#log.open_file = "rtorrent", /var/log/rtorrent/rtorrent.log
+#log.add_output = "info", "rtorrent"
+#log.add_output = "critical", "rtorrent"
+#log.add_output = "error", "rtorrent"
+#log.add_output = "warn", "rtorrent"
+#log.add_output = "notice", "rtorrent"
+#log.add_output = "debug", "rtorrent"
