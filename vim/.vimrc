@@ -14,14 +14,13 @@ call plug#begin('~/.vim/plugged')
   Plug 'pearofducks/ansible-vim'
   Plug 'plasticboy/vim-markdown'
   Plug 'rust-lang/rust.vim'
+  Plug 'fatih/vim-go'
 
   " Various plugins
   " Shows file diffs
   Plug 'airblade/vim-gitgutter'
   " Python auto completion
   Plug 'davidhalter/jedi-vim'
-  " Asynchronous Linting
-  Plug 'dense-analysis/ale', { 'do': 'pip install flake8 autopep8' }
   " Markdown preview
   Plug 'iamcco/markdown-preview.nvim', { 'do': ':call mkdp#util#install()', 'for': 'markdown', 'on': 'MarkdownPreview' }
   " Status line
@@ -31,6 +30,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf.vim'
   " Tagbar
   Plug 'majutsushi/tagbar'
+  " Flake8
+  Plug 'nvie/vim-flake8', { 'do': 'pip install flake8' }
   " git commit editing
   Plug 'rhysd/committia.vim'
   " Nerdtree
@@ -94,6 +95,7 @@ autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab|set tex
 autocmd FileType html set tabstop=2|set shiftwidth=2|set expandtab
 autocmd FileType rst set tabstop=2|set shiftwidth=2|set expandtab|set textwidth=79
 autocmd FileType markdown set tabstop=2|set shiftwidth=2|set expandtab|set textwidth=79
+autocmd FileType go set tabstop=4|set shiftwidth=4|set noexpandtab|set textwidth=79
 
 """
 """ Key mappings
@@ -142,6 +144,10 @@ let g:NERDTreeWinSize = 35
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " Hide the GitGutter signcolumn for the NerdTree tab
 autocmd FileType nerdtree setlocal signcolumn=no
+
+""" vim-flake8
+" Run flake8 upon writing to file
+autocmd BufWritePost *.py call flake8#Flake8()
 
 """ vim-gitgutter
 let g:gitgutter_sign_added = "\u25B6"
