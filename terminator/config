@@ -1,4 +1,5 @@
 [global_config]
+  suppress_multiple_term_dialog = True
 [keybindings]
 [layouts]
   [[default]]
@@ -14,7 +15,7 @@
     background_color = "#383838"
     cursor_color = "#f4f4f4"
     custom_command = zsh
-    font = Roboto Mono Medium 10
+    font = Roboto Mono Medium 10.19921875
     foreground_color = "#f4f4f4"
     use_custom_command = True
     use_system_font = False
