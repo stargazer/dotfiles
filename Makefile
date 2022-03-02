@@ -41,7 +41,7 @@ setup-fonts:
 
 	fc-cache -f -v ${HOME}/.fonts/adobe-fonts/source-code-pro
 
-	gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Ubuntu 9'
+	gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Ubuntu Medium 9'
 	gsettings set org.gnome.desktop.interface font-name 'Ubuntu 10'
 	gsettings set org.gnome.desktop.interface document-font-name 'Sans 9'
 	gsettings set org.gnome.desktop.interface monospace-font-name 'Ubuntu Mono 10'
