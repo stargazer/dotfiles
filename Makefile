@@ -99,9 +99,9 @@ setup-gnome-shell-extensions:
 setup-ubuntu-dock:
 	gsettings set org.gnome.shell.extensions.dash-to-dock autohide true
 	gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
-	gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
+	gsettings set org.gnome.shell.extensions.dash-to-dock dock-position TOP
 	gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode FIXED
-	gsettings set org.gnome.shell.extensions.dash-to-dock background-opacity 0.2
+	gsettings set org.gnome.shell.extensions.dash-to-dock background-opacity 0.8
 	gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 48
 	gsettings set org.gnome.shell.extensions.dash-to-dock unity-backlit-items true
 
