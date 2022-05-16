@@ -112,3 +112,4 @@ method.set_key=event.download.inserted_new,add_all_trackers0047,"d.tracker.inser
 method.set_key=event.download.inserted_new,add_all_trackers0048,"d.tracker.insert=\"32\",\"https://gwp2-v19.rinet.ru:80/announce\""
 method.set_key=event.download.inserted_new,add_all_trackers0049,"d.tracker.insert=\"32\",\"https://tr.kxmp.cf:80/announce\""
 method.set_key=event.download.inserted_new,add_all_trackers0050,"d.tracker.insert=\"32\",\"https://explodie.org:6969/announce\""
+method.set_key=event.download.inserted_new,add_all_trackers0051,"d.tracker.insert=\"32\",\"udp://tracker.openbittorrent.com:6969\""
