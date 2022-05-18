@@ -74,6 +74,11 @@ set listchars=tab:>·,trail:·,nbsp:~
 " Select font for Gvim
 set guifont=Roboto\ Mono\ Medium\ 10
 
+" Prevent 'tilde backup files' (eg. myfile.txt~) from being created
+set nobackup
+" Disable 'swap files' (eg. .myfile.txt.swp) from being created
+set noswapfile
+
 """
 """ Color scheme
 """
