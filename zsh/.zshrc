@@ -36,3 +36,5 @@ alias git-network-detail-verbose='git log --graph --all --format="%D - %s"'
 alias git-flow-chart="git log --graph --simplify-by-decoration --pretty=format:'%C(yellow)%h%C(white)%d %C(bold black)%ar %C(reset)%n' --all"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
