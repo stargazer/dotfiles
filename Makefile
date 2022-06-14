@@ -1,7 +1,6 @@
 setup: \
 	init \
 	setup-profile \
-	setup-bashrc \
 	setup-git \
 	setup-fonts \
 	setup-terminator \
@@ -21,9 +20,6 @@ init:
 
 setup-profile:
 	ln -sf `pwd`/.profile ${HOME}/.
-
-setup-bashrc:
-	ln -sf `pwd`/.bashrc ${HOME}/.
 
 setup-git:
 	git config --global core.editor "vim"
