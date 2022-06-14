@@ -10,9 +10,7 @@ setup: \
 	setup-vim \
 	setup-gnome-shell-extensions \
 	setup-ubuntu-dock \
-	setup-gtk-themes \
-	setup-vagrant \
-	setup-ansible
+	setup-gtk-themes
 
 init:
 	sudo apt-get update
@@ -29,8 +27,8 @@ setup-bashrc:
 
 setup-zsh:
 	sudo apt-get install -y zsh
-
 	curl -sL git.io/antibody | sh -s
+
 	ln -sf `pwd`/zsh/.zshrc ${HOME}/.
 	ln -sf `pwd`/zsh/.zsh_plugins.txt ${HOME}/.
 
@@ -119,14 +117,3 @@ setup-gtk-themes:
 
 	gsettings set org.gnome.desktop.interface gtk-theme Nextwaita-SCALE
 	gsettings set org.gnome.desktop.interface icon-theme Paper
-
-setup-vagrant:
-	sudo apt-get remove -y vagrant
-	wget https://releases.hashicorp.com/vagrant/2.2.4/vagrant_2.2.4_x86_64.deb
-	sudo dpkg -i vagrant_2.2.4_x86_64.deb
-	rm vagrant_2.2.4_x86_64.deb
-
-	sudo apt-get install nfs-kernel-server
-
-setup-ansible:
-	pip install ansible==2.7.*
