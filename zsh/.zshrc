@@ -25,6 +25,10 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+# Configure fzf (which has already been installed by the vim plugin manager)
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+
 # Deal with incompatibilities when ssh-ing
 export TERM=xterm-256color
 
@@ -32,7 +36,5 @@ alias git-network-high-level='git log --graph --all --simplify-by-decoration --p
 alias git-network-detail='git log --graph --all --format="%D"'
 alias git-network-detail-verbose='git log --graph --all --format="%D - %s"'
 alias git-flow-chart="git log --graph --simplify-by-decoration --pretty=format:'%C(yellow)%h%C(white)%d %C(bold black)%ar %C(reset)%n' --all"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
