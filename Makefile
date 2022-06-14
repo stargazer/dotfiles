@@ -2,11 +2,10 @@ setup: \
 	init \
 	setup-profile \
 	setup-bashrc \
+	setup-zsh \
 	setup-git \
 	setup-fonts \
 	setup-terminator \
-	setup-antibody \
-	setup-zsh \
 	setup-tmux \
 	setup-vim \
 	setup-gnome-shell-extensions \
@@ -23,7 +22,17 @@ setup-profile:
 	ln -sf `pwd`/.profile ${HOME}/.
 
 setup-bashrc:
+	# Why is this relevant, if i'm using zsh?
+	# I'm actually only using zsh when running Terminator. When, for example, opening a terminal using Alt-Fn,
+	# that terminalI runs the bash shell. And in that base, it does make sense to a sane configuration for bash.
 	ln -sf `pwd`/.bashrc ${HOME}/.
+
+setup-zsh:
+	sudo apt-get install -y zsh
+
+	curl -sL git.io/antibody | sh -s
+	ln -sf `pwd`/zsh/.zshrc ${HOME}/.
+	ln -sf `pwd`/zsh/.zsh_plugins.txt ${HOME}/.
 
 setup-git:
 	git config --global core.editor "vim"
@@ -59,7 +68,6 @@ setup-fonts:
 	# gsettings set org.gnome.settings-daemon.plugins.xsettings antialiasing rgba
 	# gsettings set org.gnome.settings-daemon.plugins.xsettings rgba-order vrgb
 
-
 setup-font-rendering:
 	# Fix font rendering
 	# See https://humdi.net/wiki/tips/how-to-fix-blurry-font-rendering-in-ubuntu
@@ -69,14 +77,6 @@ setup-terminator:
 	sudo apt-get install -y terminator
 	mkdir -p ${HOME}/.config/terminator
 	ln -sf `pwd`/terminator/config ${HOME}/.config/terminator/.
-
-setup-antibody:
-	curl -sL git.io/antibody | sh -s
-
-setup-zsh:
-	sudo apt-get install -y zsh
-	ln -sf `pwd`/zsh/.zshrc ${HOME}/.
-	ln -sf `pwd`/zsh/.zsh_plugins.txt ${HOME}/.
 
 setup-tmux:
 	sudo apt-get install -y tmux

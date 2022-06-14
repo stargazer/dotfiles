@@ -116,7 +116,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Export envvar for Ansible password file
-export ANSIBLE_VAULT_PASSWORD_FILE="${HOME}/.vault-smartpr"
-
+# Configure fzf (which has already been installed by the vim plugin manager)
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
