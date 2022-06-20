@@ -94,6 +94,8 @@ setup-gnome-shell-extensions:
 	mkdir -p ${HOME}/.local/share/gnome-shell/extensions
 	git clone https://github.com/gTile/gTile.git ~/.local/share/gnome-shell/extensions/gTile@vibou
 
+	sudo apt install -y gnome-extension-ubuntu-dock gnome-shell-desktop-icons gnome-shell-extension-appindicator
+
 setup-ubuntu-dock:
 	gsettings set org.gnome.shell.extensions.dash-to-dock autohide true
 	gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
