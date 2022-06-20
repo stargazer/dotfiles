@@ -10,7 +10,8 @@ setup: \
 	setup-vim \
 	setup-gnome-shell-extensions \
 	setup-ubuntu-dock \
-	setup-gtk-themes
+	setup-gtk-themes \
+	disable-wayland
 
 init:
 	sudo apt-get update
@@ -119,3 +120,8 @@ setup-gtk-themes:
 
 	gsettings set org.gnome.desktop.interface gtk-theme Nextwaita-SCALE
 	gsettings set org.gnome.desktop.interface icon-theme Paper
+
+disable-wayland:
+	# Disable Wayland in order to enable the X server
+	# Tools like `barrier` don't work with Wayland
+	sudo sed -i 's/#WaylandEnable=false/WaylandEnable=false/g' /etc/gdm3/custom.conf
